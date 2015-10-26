@@ -13,6 +13,7 @@
 		293452C01BDE1CCB0044C22C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293452BE1BDE1CCB0044C22C /* Main.storyboard */; };
 		293452C21BDE1CCB0044C22C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293452C11BDE1CCB0044C22C /* Assets.xcassets */; };
 		293452C51BDE1CCB0044C22C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293452C31BDE1CCB0044C22C /* LaunchScreen.storyboard */; };
+		293452CE1BDE1CDF0044C22C /* KGSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 293452CD1BDE1CDF0044C22C /* KGSegmentView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		293452C11BDE1CCB0044C22C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		293452C41BDE1CCB0044C22C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		293452C61BDE1CCB0044C22C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		293452CC1BDE1CDF0044C22C /* KGSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGSegmentView.h; sourceTree = "<group>"; };
+		293452CD1BDE1CDF0044C22C /* KGSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGSegmentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		293452B41BDE1CCB0044C22C /* KGSegmentControlTest */ = {
 			isa = PBXGroup;
 			children = (
+				293452CC1BDE1CDF0044C22C /* KGSegmentView.h */,
+				293452CD1BDE1CDF0044C22C /* KGSegmentView.m */,
 				293452B81BDE1CCB0044C22C /* AppDelegate.h */,
 				293452B91BDE1CCB0044C22C /* AppDelegate.m */,
 				293452BB1BDE1CCB0044C22C /* ViewController.h */,
@@ -152,6 +157,7 @@
 			files = (
 				293452BD1BDE1CCB0044C22C /* ViewController.m in Sources */,
 				293452BA1BDE1CCB0044C22C /* AppDelegate.m in Sources */,
+				293452CE1BDE1CDF0044C22C /* KGSegmentView.m in Sources */,
 				293452B71BDE1CCB0044C22C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +269,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KGSegmentControlTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kilogramm.KGSegmentControlTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,6 +281,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KGSegmentControlTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kilogramm.KGSegmentControlTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class KGSegmentView;
+
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet KGSegmentView *segmentView;
+@property (weak, nonatomic) IBOutlet UIView *testColorView;
 
 @end
 

@@ -44,18 +44,6 @@ static const NSTimeInterval kAnimationDuration = 0.3f;
     return self;
 }
 
-- (instancetype) initWithCoder:(NSCoder *)aDecoder {
-    NSLog(@"%s", __FUNCTION__);
-    self = [super initWithCoder:aDecoder];
-    
-    if (self) {
-        [self defaultSettings];
-        //[self setup];
-    }
-    
-    return self;
-}
-
  + (instancetype)switchWithStringsArray:(NSArray *)strings
 {
     // to do
@@ -107,12 +95,15 @@ static const NSTimeInterval kAnimationDuration = 0.3f;
 
 }
 
+- (void) awakeFromNib {
+    [self defaultSettings];
+    [self setup];
+}
+
 - (void) setup {
     
     self.backgroundView = [[UIView alloc] init];
     self.backgroundView.backgroundColor = self.backgroundColor;
-    //self.backgroundView.layer.borderWidth = 1.5f;
-    //self.backgroundView.layer.borderColor = [UIColor redColor].CGColor;
     self.backgroundView.userInteractionEnabled = YES;
     [self addSubview:self.backgroundView];
     
@@ -124,11 +115,12 @@ static const NSTimeInterval kAnimationDuration = 0.3f;
         UILabel *label = [[UILabel alloc] init];
         label.tag = k;
         label.text = string;
-        label.font = self.font;
         label.adjustsFontSizeToFitWidth = YES;
         label.adjustsLetterSpacingToFitWidth = YES;
         label.textAlignment = NSTextAlignmentCenter;
-        label.textColor = self.labelTextColorOutsideSlider;
+#warning kg_font, kg_color
+        label.textColor = [UIColor lightGrayColor];
+        label.font = self.font;
         [self.backgroundView addSubview:label];
         [self.labels addObject:label];
         
@@ -139,12 +131,11 @@ static const NSTimeInterval kAnimationDuration = 0.3f;
     
     self.borderView = [[UIView alloc] init];
     self.borderView.layer.cornerRadius = self.cornerRadius;
-    self.borderView.layer.borderWidth = 1.5f;
+    self.borderView.layer.borderWidth = 0.f;
     self.borderView.layer.borderColor = self.labelTextColorOutsideSlider.CGColor;
     self.borderView.clipsToBounds = YES;
     [self addSubview: self.borderView];
-    
-    
+        
     self.sliderView = [[UIView alloc] init];
     self.sliderView.backgroundColor = self.sliderColor;
     self.sliderView.clipsToBounds = YES;

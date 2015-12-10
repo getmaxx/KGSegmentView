@@ -9,17 +9,15 @@
 
 #import <UIKit/UIKit.h>
 
-IB_DESIGNABLE
-
 @interface KGSegmentView : UIControl
 
-@property (strong, nonatomic) IBInspectable UIColor *backgroundColor; // defaults to gray
-@property (strong, nonatomic) IBInspectable UIColor *sliderColor; // defaults to white
-@property (strong, nonatomic) IBInspectable UIColor *labelTextColorInsideSlider; // defaults to black
-@property (strong, nonatomic) IBInspectable UIColor *labelTextColorOutsideSlider; // defaults to white
-@property (strong, nonatomic) IBInspectable UIFont *font;
-@property (nonatomic)         IBInspectable CGFloat  cornerRadius; // defaults to 12
-@property (nonatomic)         IBInspectable CGFloat  sliderOffset; // slider offset from background, top, bottom, left, right
+@property (strong, nonatomic)  UIColor *backgroundColor; // defaults to gray
+@property (strong, nonatomic)  UIColor *sliderColor; // defaults to white
+@property (strong, nonatomic)  UIColor *labelTextColorInsideSlider; // defaults to black
+@property (strong, nonatomic)  UIColor *labelTextColorOutsideSlider; // defaults to white
+@property (strong, nonatomic)  UIFont *font;
+@property (nonatomic)          CGFloat  cornerRadius; // defaults to 12
+@property (nonatomic)          CGFloat  sliderOffset; // slider offset from background, top, bottom, left, right
 
 @property (strong, nonatomic, setter = setItems:) NSArray *strings; // labels in segment control
 
